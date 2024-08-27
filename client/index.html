@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heart Disease Prediction</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <header>
+            <div class="header-container">
+                <img src="heart.png" alt="Logo" class="logo">
+                <p class="centered-text">Heart Disease Prediction</p>
+            </div>
+        </header>
+        <table class="table">
+            <tr>
+                <td for="age">Age :</td>
+                <td>
+                    <input type="number" class="form-control" id="age" name="age" required>
+                </td>
+            </tr>
+            <tr>
+                <td for="sex">Sex :</td>
+                <td>
+                    <select id="sex" name="Sex" class="form-control">
+                        <option value="">--sex--</option>
+                        <option value="0">Female</option>
+                        <option value="1">Male</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td for="cp">Chest Pain Type :</td>
+                <td>
+                    <select id="cp" name="cp" class="form-control">
+                        <option value="">--Chest Pain--</option>
+                        <option value="0">Typical Angina</option>
+                        <option value="1">Atypical Angina</option>
+                        <option value="2">Non-Anginal Pain</option>
+                        <option value="3">Asymptomatic</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td for="trestbps" class="form-label">Resting Blood Pressure (mm Hg) :</td>
+                <td>
+                    <input type="number" class="form-control" id="trestbps" name="trestbps" required>
+                </td>
+            </tr>
+            <tr>
+                <td for="chol">Serum Cholesterol (mg/dL) :</td>
+                <td>
+                    <input type="number" class="form-control" id="chol" name="chol" required>
+                </td>
+            </tr>
+            <tr>
+                <td for="fbs">Fasting Blood Sugar > 120 mg/dL :</td>
+                <td>
+                    <select id="fbs" name="fbs" class="form-control">
+                        <option value="">--Blood Sugar--</option>
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td for="restecg">Resting Electrocardiographic Results :</td>
+                <td>
+                    <select id="restecg" name="restecg" class="form-control">
+                        <option value="">--Electrocardiographic Results--</option>
+                        <option value="0">Normal</option>
+                        <option value="1">ST-T Wave Abnormality</option>
+                        <option value="2">Left Ventricular Hypertrophy</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td for="thalach">Maximum Heart Rate Achieved :</td>
+                <td>
+                    <input type="number" class="form-control" id="thalach" name="thalach" required>
+                </td>
+            </tr>
+            <tr>
+                <td for="exang">Exercise Induced Angina :</td>
+                <td>
+                    <select id="exang" name="exang" class="form-control">
+                        <option value="">--Exercise Induced Angina--</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td for="oldpeak">ST Depression Induced by Exercise Relative to Rest :</td>
+                <td>
+                    <input type="number" class="form-control" id="oldpeak" name="oldpeak" required>
+                </td>
+            </tr>
+            <tr>
+                <td for="slope">Slope of the Peak Exercise ST Segment :</td>
+                <td>
+                    <select id="slope" name="slope" class="form-control">
+                        <option value="">--Slope--</option>
+                        <option value="0">Upsloping</option>
+                        <option value="1">Flat</option>
+                        <option value="2">Downsloping</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td for="ca" class="form-label">Number of Major Vessels (0-3) Colored by Flourosopy :</td>
+                <td>
+                    <input type="number" class="form-control" id="ca" name="ca" required>
+                </td>
+            </tr>
+            <tr>
+                <td for="thal" class="form-label">Thalassemia :</td>
+                <td>
+                    <select id="thal" name="thal" class="form-control">
+                        <option value="">--Thalassemia--</option>
+                        <option value="0">Normal</option>
+                        <option value="1">Fixed Defect</option>
+                        <option value="2">Reversible Defect</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center">
+                    <button onclick="check()" class="btn btn-primary mt-3">Submit</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="done"></div>
+                </td>
+                <td>
+                    <div id="download"></div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Toast Container -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="..." class="rounded me-2" alt="...">
+                    <strong class="me-auto">Error</strong>
+                    <small>Just now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Please fill out all the fields before submitting the form.
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
