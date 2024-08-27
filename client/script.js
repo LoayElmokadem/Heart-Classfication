@@ -37,6 +37,13 @@ function enter_ML_model(){
 
     document.getElementById('done').innerHTML = "<p>added to ML model successfully</p>";
     document.getElementById('download').innerHTML = "<button onclick='down_pdf()' class='btn btn-primary mt-3'>Download Your Results As PDF</button>";
+
+    if (prediction == 1) {
+        window.location.href = "diseased.html";
+    } else {
+        window.location.href = "not_diseased.html";
+    }
+    
 }
 
 function down_pdf(){
