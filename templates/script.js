@@ -59,3 +59,4 @@ function enter_ML_model() {
         alert('An error occurred while processing your request.');
     });
 }
+

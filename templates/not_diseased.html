@@ -2,17 +2,42 @@
 <html>
     <head>
         <title>safe heart</title>
-        <link href="style.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
     </head>
     <body>
         <script src="script.js"></script>
-        <header>
-            <div class="header-container">
-                <img src="heart.png" alt="Logo" class="logo">
-                <p class="centered-text">Heart Disease Prediction</p>
-            </div>
+        <header class="header">
+            <a href="#" class="logo"><img src="heart.png" alt="Logo" class="logo"> <i class="fas fa-mug-hot"></i></a>
+    
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#about">about us</a>
+                <a href="#events">events</a>
+                <a href="#contact">contact us</a>
+            </nav>
+    
+            <button onclick="window.location.href='test.html';" class="btn btn-primary mt-3">Take A Test</button>
         </header>
-        <!--4akar f s7eto-->
+        <div class="home">
+            <h1>Good News Your Heart Isn't Disease</h1>
+            <p>TRY TO KEEP</p>
+            <p class="font-red">YOUR HEART</p>
+            <p class="font-red">ALWAYS HEALTHY</p>
+            <p>There is some advices to make your</p>
+            <p>heart always healthy :</p>
+            <ol>
+                <li>eat healty food</li>
+                <li>drink alot of water</li>
+                <li>sleep at least 8 hours per day</li>
+                <li>play sport</li>
+            </ol>
+            <img src="small_heart.png" class="smallHeart" alt="smallHeart">
+            <img src="hand_heart.png" class="Heart" alt="Heart">
+        </div>
+        <div id="done"></div>
+        <div id="download"></div>
         <div id="done"></div>
         <div id="download"></div>
     </body>
