@@ -62,6 +62,11 @@ def index():
 def serve_static(filename):
     return send_from_directory(app.template_folder, filename)
 
+@app.route('/test')
+def test_page():
+    return render_template('test.html')
+
+
 @app.route('/submit', methods=['POST'])
 def submit():
     data = request.get_json()
