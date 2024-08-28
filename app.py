@@ -79,7 +79,7 @@ def submit():
     output_class = "Heart Diseased" if prediction == 1 else "No Heart Disease"
     print(output_class)
 
-    create_medical_report('medical_report.pdf', df, prediction, patient_name)
+    create_medical_report('templates/medical_report.pdf', df, prediction, patient_name)
     print("report saved")
 
     return jsonify({
