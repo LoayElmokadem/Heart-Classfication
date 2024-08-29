@@ -62,6 +62,11 @@ def index():
 def serve_static(filename):
     return send_from_directory(app.template_folder, filename)
 
+@app.route('/test')
+def test_page():
+    return render_template('test.html')
+
+
 @app.route('/submit', methods=['POST'])
 def submit():
     data = request.get_json()
@@ -74,7 +79,7 @@ def submit():
     output_class = "Heart Diseased" if prediction == 1 else "No Heart Disease"
     print(output_class)
 
-    create_medical_report('medical_report.pdf', df, prediction, patient_name)
+    create_medical_report('templates/medical_report.pdf', df, prediction, patient_name)
     print("report saved")
 
     return jsonify({
